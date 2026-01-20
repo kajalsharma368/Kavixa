@@ -54,10 +54,16 @@ main {
 /* HERO */
 .hero {
   min-height: 100vh;
+  background-image: url("C:\Users\Admin\Downloads\map-lying-wooden-table.jpg");
   background-size: cover;
   background-position: center;
+  background-repeat: no-repeat;
   position: relative;
+  display: flex;
+  align-items: center;
+  padding: 80px;
 }
+
 
 .hero-overlay {
   position: absolute;
