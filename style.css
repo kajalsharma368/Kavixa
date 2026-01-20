@@ -2,7 +2,7 @@
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: "Segoe UI", sans-serif;
+  font-family: Segoe UI, sans-serif;
 }
 
 body {
@@ -10,78 +10,97 @@ body {
   color: #fff;
 }
 
-/* NAVBAR */
-.navbar {
-  position: fixed;
-  top: 0;
-  width: 100%;
-  padding: 20px 60px;
+/* LAYOUT */
+.layout {
   display: flex;
-  justify-content: space-between;
+}
+
+/* SIDEBAR */
+.sidebar {
+  width: 90px;
+  height: 100vh;
+  position: fixed;
+  left: 0;
+  top: 0;
+  background: #000;
+  border-right: 1px solid #222;
+  display: flex;
+  flex-direction: column;
   align-items: center;
-  background: rgba(0, 0, 0, 0.6);
-  backdrop-filter: blur(10px);
-  z-index: 10;
+  padding-top: 30px;
 }
 
-.navbar a {
-  color: #fff;
-  text-decoration: none;
-  margin-left: 25px;
-  font-size: 14px;
-}
-
-.logo {
-  font-size: 20px;
+.brand {
   font-weight: bold;
+  margin-bottom: 40px;
+}
+
+.side-nav {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.side-nav a {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  text-decoration: none;
+  color: #aaa;
+  font-size: 13px;
+  letter-spacing: 2px;
+}
+
+.side-nav a:hover {
+  color: #00ffd1;
+}
+
+/* CONTENT */
+.content {
+  margin-left: 90px;
+  width: calc(100% - 90px);
+}
+
+/* SECTIONS */
+.section {
+  min-height: 100vh;
+  padding: 100px;
+}
+
+.dark {
+  background: #0b0b0b;
 }
 
 /* HERO */
 .hero {
-  height: 100vh;
+  position: relative;
   background-image: url("https://images.unsplash.com/photo-1521737604893-d14cc237f11d");
   background-size: cover;
   background-position: center;
-  position: relative;
-  display: flex;
-  align-items: center;
 }
 
-.hero-overlay {
+.overlay {
   position: absolute;
   inset: 0;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0,0,0,0.7);
 }
 
 .hero-content {
   position: relative;
-  z-index: 2;
-  padding-left: 80px;
-  max-width: 700px;
+  max-width: 600px;
 }
 
 .hero h1 {
   font-size: 64px;
-  line-height: 1.1;
   margin-bottom: 20px;
 }
 
-.hero h1 span {
+.hero span {
   color: #00ffd1;
 }
 
-.hero p {
-  color: #ccc;
-  max-width: 420px;
-  margin-bottom: 30px;
-  font-size: 16px;
-}
-
-.btn-primary {
-  padding: 14px 36px;
+.hero button {
+  padding: 12px 30px;
   background: #00ffd1;
   border: none;
-  cursor: pointer;
   font-weight: bold;
-  font-size: 14px;
 }
