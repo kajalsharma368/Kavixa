@@ -3,102 +3,98 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Kavixa | Digital Design & Development Company</title>
+  <title>PreusX Interactive</title>
 
+  <!-- CSS -->
   <link rel="stylesheet" href="style.css">
 <script src="main.js"></script>
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
-<div class="layout">
+<!-- SIDE NAV -->
+<aside class="sidebar">
+  <div class="logo">PX</div>
+  <nav>
+    <a href="#home">Home</a>
+    <a href="#work">Work</a>
+    <a href="#skills">Skills</a>
+    <a href="#blog">Blog</a>
+    <a href="#contact">Contact</a>
+  </nav>
+</aside>
 
-  <!-- LEFT STICKY HEADER -->
-  <aside class="sidebar">
-    <div class="brand">Kavixa</div>
-
-    <nav class="side-nav">
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#blog">Blog</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </aside>
-
-  <!-- RIGHT CONTENT -->
-  <main class="content">
-
-    <!-- HOME -->
-    <section id="home" class="section hero">
-      <div class="overlay"></div>
-      <div class="hero-content">
-        <h1>Creative Digital <span>Developer</span></h1>
-        <p>I build modern websites & interfaces using clean code.</p>
-        <button>View Work</button>
-      </div>
-    </section>
-
-    <!-- ABOUT -->
-    <section id="about" class="section">
-      <h2>About Me</h2>
-      <p>
-        I am a frontend developer working with HTML, CSS, JavaScript & React.
-      </p>
-    </section>
-
-    <!-- PROJECTS -->
-    <section id="projects" class="section dark">
-      <h2>Projects</h2>
-      <p>Selected works and case studies.</p>
-    </section>
-
-    <!-- BLOG -->
-    <section id="blog" class="section">
-      <h2>Blog</h2>
-      <p>Articles, tutorials & insights.</p>
-    </section>
-
-    <!-- CONTACT -->
-    <section id="contact" class="section dark">
-      <h2>Contact</h2>
-      <p>Email: hello@kavixa.com</p>
-    </section>
-
-  </main>
-</div>
-
-<script src="main.js"></script>
-</body>
-</html>
-
-  <body>
-
-  <!-- NAVBAR -->
-  <header class="navbar">
-    <div class="logo">Kavixa</div>
-    <nav>
-      <a href="#home">Home</a>
-      <a href="#about">About</a>
-      <a href="#projects">Projects</a>
-      <a href="#contact">Contact</a>
-    </nav>
-  </header>
+<!-- MAIN CONTENT -->
+<main>
 
   <!-- HERO -->
-  <section class="hero" id="home">
+  <section id="home" class="hero">
     <div class="hero-overlay"></div>
-
     <div class="hero-content">
-      <h1>
-        Creative Digital <span>Developer</span>
-      </h1>
-      <p>
-        I build modern websites & interfaces using clean code.
-      </p>
-      <button class="btn-primary">View Work</button>
+      <h1>We Are <span>PreusX Interactive</span></h1>
+      <p>A digital agency based in London</p>
+      <a href="#work" class="btn">View Work</a>
     </div>
   </section>
 
-  <script src="main.js"></script>
+  <!-- ABOUT -->
+  <section class="about">
+    <p>
+      Cras nisl lacus, tincidunt vitae neque vitae, interdum iaculis tortor.
+      Orci varius natoque penatibus et magnis dis parturient montes.
+    </p>
+  </section>
+
+  <!-- WORK GRID -->
+  <section id="work" class="work-grid">
+    <div class="work-item">Branding</div>
+    <div class="work-item">Photography</div>
+    <div class="work-item">Creative</div>
+    <div class="work-item">Content</div>
+    <div class="work-item">Commerce</div>
+    <div class="work-item">Manipulation</div>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="skills">
+    <h2>Our Skills</h2>
+
+    <div class="skill">
+      <span>Web Design</span>
+      <div class="bar"><div style="width:90%"></div></div>
+    </div>
+
+    <div class="skill">
+      <span>Development</span>
+      <div class="bar"><div style="width:85%"></div></div>
+    </div>
+
+    <div class="skill">
+      <span>Copywriting</span>
+      <div class="bar"><div style="width:80%"></div></div>
+    </div>
+  </section>
+
+  <!-- BLOG -->
+  <section id="blog" class="blog">
+    <h2>From The Blog</h2>
+
+    <div class="blog-grid">
+      <article class="blog-card">Blog Post 1</article>
+      <article class="blog-card">Blog Post 2</article>
+      <article class="blog-card">Blog Post 3</article>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer id="contact">
+    <p>© 2026 PreusX Interactive. All Rights Reserved.</p>
+  </footer>
+
+</main>
+
+<script src="js/main.js"></script>
 </body>
 </html>
