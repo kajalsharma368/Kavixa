@@ -99,11 +99,10 @@ body {
 .menu a:hover::before {
   opacity: 1;
 }
-/* 🔥 HIDE LETTER ON HOVER */
 .sidebar:hover .menu a span {
   opacity: 0;
-  width: 0;
-  margin: 0;
+  transform: translateX(-10px);
+  transition: all 0.25s ease;
 }
 
 /* ================= MAIN ================= */
