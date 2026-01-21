@@ -42,17 +42,7 @@ body {
 }
 
 
-.sidebar nav a {
-  writing-mode: vertical-rl;
-  margin: 15px 0;
-  color: #aaa;
-  text-decoration: none;
-  font-size: 12px;
-}
 
-.sidebar nav a:hover {
-  color: #fff;
-}
 .menu {
   display: flex;
   flex-direction: column;
