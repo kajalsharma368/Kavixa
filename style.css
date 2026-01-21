@@ -14,22 +14,33 @@ body {
 
 /* SIDEBAR */
 .sidebar {
-  width: 80px;
-  height: 100vh;
   position: fixed;
-  left: 0;
   top: 0;
+  left: 0;
+  width: 70px;
+  height: 100vh;
   background: #000;
-  z-index: 100;
+  color: #fff;
+  transition: width 0.35s ease;
+  z-index: 999;
+  overflow: hidden;
+}
+
+.sidebar:hover {
+  width: 220px;
 }
 
 
 
 .logo {
-  font-size: 22px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
   font-weight: 700;
-  margin: 30px 0;
+  letter-spacing: 2px;
 }
+
 
 .sidebar nav a {
   writing-mode: vertical-rl;
@@ -42,12 +53,58 @@ body {
 .sidebar nav a:hover {
   color: #fff;
 }
+.menu {
+  display: flex;
+  flex-direction: column;
+  padding-top: 40px;
+}
+
+.menu a {
+  position: relative;
+  height: 55px;
+  padding-left: 25px;
+  display: flex;
+  align-items: center;
+  color: #aaa;
+  text-decoration: none;
+  font-size: 16px;
+  transition: color 0.3s ease;
+}
+.menu a::after {
+  content: attr(data-full);
+  position: absolute;
+  left: 70px;
+  white-space: nowrap;
+  opacity: 0;
+  color: #fff;
+  transition: opacity 0.25s ease, transform 0.25s ease;
+  transform: translateX(-10px);
+}
+.sidebar:hover .menu a::after {
+  opacity: 1;
+  transform: translateX(0);
+}
+.menu a:hover {
+  color: #fff;
+}
+
+.menu a:hover::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  width: 3px;
+  height: 100%;
+  background: #fff;
+}
 
 /* MAIN */
 main {
-  margin-left: 80px;
-  width: calc(100% - 80px);
-  position: relative;
+  margin-left: 70px;
+  transition: margin-left 0.35s ease;
+}
+
+.sidebar:hover ~ main {
+  margin-left: 220px;
 }
 
 
