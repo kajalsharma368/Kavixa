@@ -27,6 +27,7 @@ body {
   width: 230px;
 }
 
+/* LOGO */
 .logo {
   height: 70px;
   display: flex;
@@ -37,7 +38,8 @@ body {
   letter-spacing: 2px;
 }
 
-/* MENU */
+/* ================= MENU ================= */
+
 .menu {
   display: flex;
   flex-direction: column;
@@ -49,38 +51,40 @@ body {
   height: 55px;
   display: flex;
   align-items: center;
+  gap: 18px;                 /* 🔥 horizontal spacing */
+  padding-left: 22px;
   text-decoration: none;
+  color: #fff;
   overflow: hidden;
 }
 
-/* 🔹 LETTER ONLY (DEFAULT VIEW) */
+/* 🔹 LETTER (DEFAULT COLLAPSED VIEW) */
 .menu a span {
-  width: 70px;
+  width: 26px;
   text-align: center;
-  font-size: 14px;
-  letter-spacing: 3px;
+  font-size: 13px;
+  letter-spacing: 2px;
+  flex-shrink: 0;
   color: #fff;
 }
 
 /* 🔹 FULL TEXT (HIDDEN BY DEFAULT) */
 .menu a em {
-  position: absolute;
-  left: 80px;
-  white-space: nowrap;
   font-style: normal;
-  color: #fff;
+  white-space: nowrap;
   opacity: 0;
-  transform: translateX(-10px);
-  transition: all 0.3s ease;
+  transform: translateX(-15px);
+  transition: all 0.35s ease;
+  color: #fff;
 }
 
-/* 🔹 SHOW FULL TEXT ON SIDEBAR HOVER */
+/* 🔹 SHOW TEXT ON SIDEBAR HOVER */
 .sidebar:hover .menu a em {
   opacity: 1;
   transform: translateX(0);
 }
 
-/* 🔹 LEFT LINE ON HOVER */
+/* 🔹 LEFT ACTIVE LINE (PreusX style) */
 .menu a::before {
   content: "";
   position: absolute;
@@ -89,6 +93,7 @@ body {
   height: 100%;
   background: #fff;
   opacity: 0;
+  transition: opacity 0.3s ease;
 }
 
 .menu a:hover::before {
